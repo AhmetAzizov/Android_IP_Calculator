@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ipAddressLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ipAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="IP Address"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/networkAddressLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/ipAddressLayout"
+                app:layout_constraintStart_toStartOf="@+id/ipAddressLayout"
+                app:layout_constraintTop_toBottomOf="@+id/ipAddressLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/networkAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Network Address"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usableHostIpRangeLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/networkAddressLayout"
+                app:layout_constraintStart_toStartOf="@+id/networkAddressLayout"
+                app:layout_constraintTop_toBottomOf="@+id/networkAddressLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/usableHostIpRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Usable Host IP Range"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/broadcastAddressLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/usableHostIpRangeLayout"
+                app:layout_constraintStart_toStartOf="@+id/usableHostIpRangeLayout"
+                app:layout_constraintTop_toBottomOf="@+id/usableHostIpRangeLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/broadcastAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Broadcast Address"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/subnetMaskLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/broadcastAddressLayout"
+                app:layout_constraintStart_toStartOf="@+id/broadcastAddressLayout"
+                app:layout_constraintTop_toBottomOf="@+id/broadcastAddressLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/subnetMask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Subnet Mask"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/totalHostsLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/subnetMaskLayout"
+                app:layout_constraintStart_toStartOf="@+id/subnetMaskLayout"
+                app:layout_constraintTop_toBottomOf="@+id/subnetMaskLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/totalHosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Total Number of Hosts"
+                    android:enabled="false"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usableHostsLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/subnetMaskLayout"
+                app:layout_constraintStart_toStartOf="@+id/totalHostsLayout"
+                app:layout_constraintTop_toBottomOf="@+id/totalHostsLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/usableHosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Total Number of Usable Hosts"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ipClassLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/usableHostsLayout"
+                app:layout_constraintStart_toStartOf="@+id/usableHostsLayout"
+                app:layout_constraintTop_toBottomOf="@+id/usableHostsLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ipClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="IP Class"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shortFormLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/ipClassLayout"
+                app:layout_constraintStart_toStartOf="@+id/ipClassLayout"
+                app:layout_constraintTop_toBottomOf="@+id/ipClassLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/shortForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Short:"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ipAddressBinaryLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/shortFormLayout"
+                app:layout_constraintStart_toStartOf="@+id/shortFormLayout"
+                app:layout_constraintTop_toBottomOf="@+id/shortFormLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ipAddressBinary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="IP Address Binary"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/subnetMaskBinaryLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/ipAddressBinaryLayout"
+                app:layout_constraintStart_toStartOf="@+id/ipAddressBinaryLayout"
+                app:layout_constraintTop_toBottomOf="@+id/ipAddressBinaryLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/subnetMaskBinary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Subnet Mask Binary"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/networkAddressBinaryLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/subnetMaskBinaryLayout"
+                app:layout_constraintStart_toStartOf="@+id/subnetMaskBinaryLayout"
+                app:layout_constraintTop_toBottomOf="@+id/subnetMaskBinaryLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/networkAddressBinary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Network Address Binary"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/broadcastAddressBinaryLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/networkAddressBinaryLayout"
+                app:layout_constraintStart_toStartOf="@+id/networkAddressBinaryLayout"
+                app:layout_constraintTop_toBottomOf="@+id/networkAddressBinaryLayout">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/broadcastAddressBinary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Broadcast Address Binary"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

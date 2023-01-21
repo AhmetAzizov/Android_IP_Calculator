@@ -37,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="@+id/numberOfUsersLayout"
         app:layout_constraintStart_toStartOf="@+id/numberOfUsersLayout"
         app:layout_constraintTop_toBottomOf="@+id/numberOfUsersLayout">
@@ -46,7 +47,7 @@
             android:id="@+id/ipAddress"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="IP Address"
+            android:hint="IPv4 Address"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

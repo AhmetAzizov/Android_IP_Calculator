@@ -4,18 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#D5C8C8"
+    tools:context=".MainActivity"
+    android:id="@+id/parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IPv4 Calculator"
+        android:layout_margin="20dp"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/numberOfUsersLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="20dp"
-        >
+        app:startIconDrawable="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
 
         <com.google.android.material.textfield.TextInputEditText
@@ -38,6 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         app:errorEnabled="true"
+        app:startIconDrawable="@drawable/ic_globe"
         app:layout_constraintEnd_toEndOf="@+id/numberOfUsersLayout"
         app:layout_constraintStart_toStartOf="@+id/numberOfUsersLayout"
         app:layout_constraintTop_toBottomOf="@+id/numberOfUsersLayout">
@@ -64,10 +86,25 @@
         android:padding="15dp"
         android:textColor="@color/black"
         android:text="Calculate"
+        app:rippleColor="#051771"
+        android:minHeight="70sp"
+        android:minWidth="170sp"
         app:strokeWidth="5dp"
         app:strokeColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/ipAddressLayout"
         app:layout_constraintStart_toStartOf="@+id/ipAddressLayout"
         app:layout_constraintTop_toBottomOf="@+id/ipAddressLayout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created by AhmetAzizov"
+        android:layout_margin="30dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

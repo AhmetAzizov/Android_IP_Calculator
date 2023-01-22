@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D5C8C8"
     tools:context=".MainActivity2">
 
     <ScrollView
@@ -20,7 +21,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Result"
-                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
                 android:textSize="30sp"
                 android:fontFamily="serif-monospace"
                 android:textAlignment="center"
@@ -335,12 +337,8 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
+                android:layout_margin="10dp"
                 app:layout_constraintBaseline_toBottomOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/networkAddressBinaryLayout"
                 app:layout_constraintStart_toStartOf="@+id/networkAddressBinaryLayout"
                 app:layout_constraintTop_toBottomOf="@+id/networkAddressBinaryLayout">
@@ -359,6 +357,23 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/backButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Calculation"
+                app:strokeWidth="3dp"
+                android:textSize="20sp"
+                app:rippleColor="#DF8181"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/broadcastAddressBinaryLayout"
+                app:layout_constraintRight_toRightOf="@+id/broadcastAddressBinaryLayout"
+                app:layout_constraintTop_toBottomOf="@+id/broadcastAddressBinaryLayout"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

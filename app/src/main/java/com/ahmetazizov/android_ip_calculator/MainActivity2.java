@@ -2,8 +2,11 @@ package com.ahmetazizov.android_ip_calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 //
 public class MainActivity2 extends AppCompatActivity {
@@ -21,6 +24,7 @@ public class MainActivity2 extends AppCompatActivity {
     TextInputEditText subnetMaskBinaryTextField;
     TextInputEditText networkAddressBinaryTextField;
     TextInputEditText broadcastAddressBinaryTextField;
+    MaterialButton backButton;
 
 
     @Override
@@ -41,6 +45,7 @@ public class MainActivity2 extends AppCompatActivity {
         subnetMaskBinaryTextField = findViewById(R.id.subnetMaskBinary);
         networkAddressBinaryTextField = findViewById(R.id.networkAddressBinary);
         broadcastAddressBinaryTextField = findViewById(R.id.broadcastAddressBinary);
+        backButton = findViewById(R.id.backButton);
 
 
         int number = Integer.parseInt(getIntent().getStringExtra("numberOfUsers"));
@@ -115,8 +120,17 @@ public class MainActivity2 extends AppCompatActivity {
         subnetMaskBinaryTextField.setText(subnetMask);
         networkAddressBinaryTextField.setText(networkAddress);
         broadcastAddressBinaryTextField.setText(String.valueOf(broadcastAddress));
-    }
 
+
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
 
 
